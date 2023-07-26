@@ -1,0 +1,61 @@
+@import "./../_configcss";
+
+button {
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	white-space: nowrap;
+	color: $color-light;
+	background: $main-color;
+	border-color: $main-color;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	border: 1px solid transparent;
+	padding: 0.6rem 0.85rem;
+	font-size: 1rem;
+	border-radius: 0.5rem;
+	transition: all 0.5s;
+
+	&:hover {
+		background: $main-color-hover;
+		border-color: $main-color-hover;
+		transform: translateY(5px);
+	}
+
+	&[disabled] {
+		background: grey;
+		pointer-events: none;
+	}
+}
+
+.secondary {
+	background: $color-light;
+	border-color: $color-light;
+	color: $main-color;
+
+	&:hover {
+		transform: translateY(5px);
+		background: $color-light-hover;
+		border-color: $color-light-hover;
+	}
+}
+
+.delete {
+	background: $color-important;
+	border-color: $color-important;
+	color: $color-light;
+
+	&:hover {
+		transform: translateY(5px);
+		background: $color-important-hover;
+		border-color: $color-important-hover;
+		color: $color-light-hover;
+	}
+}

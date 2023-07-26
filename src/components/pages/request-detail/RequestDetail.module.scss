@@ -1,0 +1,288 @@
+@import "./../../_configcss";
+
+.requestDetail {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & .titleBlock {
+        display: flex;
+        align-items: center;
+
+        & .buttonReturn {
+            margin-bottom: 30px;
+            fill: $main-color;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        & .title {
+            flex-basis: 100%;
+
+            @media screen and (max-width: 600px) {
+                font-size: 7vw;
+            }
+        }
+    }
+
+    & .mainBlock {
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 400px) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+
+        & .userInfo {
+            flex: 1 1 45%;
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            word-wrap: break-word;
+            background-color: $color-light;
+            background-clip: border-box;
+            box-shadow: 0 5px 7px -1px rgba(0, 103, 163, 0.23);
+            border-radius: 0.25rem;
+            font-size: 20px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 540px) {
+                min-width: auto;
+            }
+
+            & .userInfoHeader {
+                padding: 0.75rem 2rem;
+                margin-bottom: 0;
+                background-color: rgba(0, 0, 0, 0.03);
+                border-bottom: 1px solid $color-gray;
+            }
+
+            & .userInfoBold {
+                font-weight: 700;
+                color: $main-color;
+            }
+
+            & .userInfoBody {
+                flex: 1 1 auto;
+                padding: 2rem;
+                overflow-y: auto;
+            }
+
+            & .userInfoItem {
+                display: flex;
+                row-gap: 8px;
+                flex-wrap: wrap;
+                font-size: 20px;
+
+                &:not(:last-child) {
+                    padding-bottom: 20px;
+                }
+            }
+
+            & .userInfoTitle {
+                flex: 0 0 165px;
+                font-weight: 700;
+                margin-right: 20px;
+                white-space: nowrap;
+                color: $main-color;
+
+                & span {
+                    color: $color-important;
+                }
+            }
+
+            & .userInfoValue {
+                padding: 0.375rem 0.75rem;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                white-space: nowrap;
+                overflow-y: auto;
+                flex: 1 1 auto;
+                font-size: inherit;
+            }
+
+            & input.userInfoValue,
+            select.userInfoValue {
+                border-color: $main-color;
+            }
+
+            & .userInfoWrap {
+                flex: 1 1 auto;
+
+                & .userInfoWrite {
+                    width: 100%;
+                    padding: 0.375rem 0.75rem;
+                    border: 1px solid #ced4da;
+                    border-radius: 0.25rem;
+                    white-space: nowrap;
+                    overflow-y: auto;
+                    flex: 1 1 auto;
+                    font-style: inherit;
+                    font-size: inherit;
+                    margin-bottom: 5px;
+                }
+
+                & input.userInfoWrite,
+                select.userInfoWrite {
+                    border-color: $main-color;
+                }
+            }
+        }
+
+        & .requestInfo {
+            flex: 1 1 45%;
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            word-wrap: break-word;
+            background-color: $color-light;
+            background-clip: border-box;
+            box-shadow: 0 5px 7px -1px rgba(0, 103, 163, 0.23);
+            border-radius: 0.25rem;
+            font-size: 20px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 540px) {
+                min-width: auto;
+            }
+
+            & .requestInfoHeader {
+                padding: 0.75rem 2rem;
+                margin-bottom: 0;
+                background-color: rgba(0, 0, 0, 0.03);
+                border-bottom: 1px solid $color-gray;
+
+                & .requestInfoBold {
+                    font-weight: 700;
+                    color: $main-color;
+                }
+            }
+
+            & .requestInfoBody {
+                flex: 1 1 auto;
+                padding: 2rem;
+                overflow-y: auto;
+
+                & .requestSenderItem {
+                    display: flex;
+                    row-gap: 8px;
+                    flex-wrap: wrap;
+                    font-size: 20px;
+                    white-space: nowrap;
+
+                    &:not(:last-child) {
+                        padding-bottom: 20px;
+                    }
+
+                    & .requestSenderTitle {
+                        flex: 0 0 165px;
+                        font-weight: 700;
+                        margin-right: 20px;
+                        color: $main-color;
+
+                        & span {
+                            color: $color-important;
+                        }
+                    }
+
+                    & .requestSenderValue {
+                        padding: 0.375rem 0.75rem;
+                        border: 1px solid #ced4da;
+                        border-radius: 0.25rem;
+                        white-space: nowrap;
+                        overflow-y: auto;
+                        flex: 1 1 auto;
+                        font-size: inherit;
+                    }
+
+                    & input.requestSenderValue {
+                        border-color: $main-color;
+                    }
+
+                    & .requestSenderWrap {
+                        flex: 1 1 auto;
+
+                        & .requestSenderWrite {
+                            width: 100%;
+                            padding: 0.375rem 0.75rem;
+                            border: 1px solid #ced4da;
+                            border-radius: 0.25rem;
+                            white-space: nowrap;
+                            overflow-y: auto;
+                            flex: 1 1 auto;
+                            font-style: inherit;
+                            font-size: inherit;
+                            margin-bottom: 5px;
+                        }
+
+                        & input.requestSenderWrite {
+                            border-color: $main-color;
+                        }
+                    }
+                }
+
+                & .requestSenderBlock {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    font-size: 20px;
+                    row-gap: 8px;
+
+                    &:not(:last-child) {
+                        padding-bottom: 20px;
+                    }
+
+                    & .senderBlockValue {
+                        padding: 0.375rem 0.75rem;
+                        border: 1px solid #ced4da;
+                        border-radius: 0.25rem;
+                        white-space: nowrap;
+                        overflow-y: auto;
+                        flex: 1 1 auto;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 20px;
+                        white-space: pre-line;
+                        min-height: 150px;
+                        width: 100%;
+                    }
+
+                    & textarea.senderBlockValue {
+                        resize: vertical;
+                        border-color: $main-color;
+                    }
+                }
+            }
+
+            & .senderBlockTitle {
+                color: $main-color;
+                font-weight: 700;
+                margin-right: 20px;
+
+                & span {
+                    color: $color-important;
+                }
+            }
+        }
+    }
+
+    .bottomBlock {
+        display: flex;
+        column-gap: 20px;
+        font-weight: 700;
+        flex-wrap: wrap;
+        margin: 10px 0 30px;
+
+        & .bottomBlockTitle {
+            margin-right: 8px;
+            color: $main-color;
+        }
+    }
+
+    & .entryInfo {
+        font-size: 14px;
+        color: $color-important;
+    }
+}

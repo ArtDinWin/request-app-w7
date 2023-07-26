@@ -1,0 +1,36 @@
+@import "./../../_configcss";
+
+.pageError {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & .title {
+        text-transform: none;
+    }
+
+    & .link {
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+
+        & .buttonReturn {
+            fill: $main-color;
+            margin-right: 10px;
+        }
+
+        & a {
+            color: $main-color;
+        }
+    }
+
+    & .imgWrap {
+        display: flex;
+        justify-content: center;
+
+        & img {
+            max-width: 900px;
+        }
+    }
+}

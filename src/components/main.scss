@@ -1,0 +1,139 @@
+@import-normalize;
+@import "./_configcss";
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: normal;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+p, div, span, ul, li {
+    cursor: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: $color-light-hover;
+}
+
+h1 {    
+    font-size: 40px;    
+    font-weight: 700;
+    text-align: center;
+    color: $main-color;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+@media screen and (max-width: 600px) {
+        font-size: 8vw;
+    }
+}
+
+*::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;    
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $color-light-gray;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: $color-light-hover;
+}
+
+
+* {
+    scrollbar-color: $color-light-gray $color-light-hover;
+}
+
+select {
+        font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,118 @@
+@import "./../../_configcss";
+
+.page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	& .mainBlock {
+		flex: 1 1 auto;
+	}
+
+	& .listUsers {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+
+		& .itemUser {
+			display: flex;
+			align-items: center;
+			column-gap: 20px;
+			background-color: $color-light;
+			padding: 20px 30px;
+			border-radius: 10px;
+			box-shadow: 0 5px 7px -1px rgba(0, 103, 163, 0.23);
+			color: $color-gray;
+			font-weight: 600;
+			cursor: pointer;
+			overflow-y: auto;
+			transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98),
+				box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
+
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 0 9px 47px 11px rgba(0, 103, 163, 0.18);
+			}
+
+			& .userIcon {
+				fill: $main-color;
+				width: 30px;
+				height: 30px;
+			}
+
+			& .userIconWrap,
+			.userRequest {
+				display: block;
+				border-radius: 50%;
+				background: $color-light-hover;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 700;
+			}
+
+			& .userRequest {
+				width: 40px;
+				height: 40px;
+				flex: 0 0 40px;
+			}
+
+			& .userIconWrap {
+				width: 60px;
+				height: 60px;
+				flex: 0 0 60px;
+			}
+
+			& .userInfo {
+				display: flex;
+				column-gap: 20px;
+				row-gap: 5px;
+				flex-basis: 100%;
+				flex-wrap: wrap;
+			}
+
+			& .userName {
+				display: flex;
+				align-items: center;
+			}
+
+			& .userEmail,
+			.userPhone {
+				white-space: nowrap;
+				display: flex;
+				align-items: center;
+				column-gap: 8px;
+			}
+
+			& .userPhone {
+				flex: 1 1 auto;
+			}
+		}
+	}
+
+	.totalInfo {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		font-weight: 700;
+		margin-top: 20px;
+
+		& .totalInfoTitle {
+			margin-right: 8px;
+			color: $main-color;
+		}
+	}
+
+	& .iconContact {
+		fill: $main-color;
+		width: 25px;
+		height: 25px;
+	}
+
+	& .bottomBlock {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 20px;
+		gap: 20px;
+	}
+}

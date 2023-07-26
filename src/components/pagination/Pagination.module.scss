@@ -1,0 +1,53 @@
+@import "./../_configcss";
+
+.pageNav {
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+
+    & .pageButton {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 8px;
+        color: $main-color;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        & .pageNavText {
+            @media screen and (max-width: 350px) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: $main-color-hover;
+        }
+
+        &.none {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &.number {
+            color: $color-light;
+            background: $main-color;
+            padding: 7px 10px;
+            transition: all 0.5s;
+            border-radius: 5px;
+
+            &:hover {
+                background: $main-color-hover;
+            }
+        }
+
+        &.activePage {
+            color: $color-light;
+            background: $main-color-hover;
+        }
+    }
+}
